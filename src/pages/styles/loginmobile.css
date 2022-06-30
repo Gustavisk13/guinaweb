@@ -1,0 +1,29 @@
+@media(min-width: 320px){
+
+.container-aside-login .wrapper{
+    margin-top: var(--nav-height);
+}
+
+.wrapper{
+    width: min(50rem, 100%);
+    
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+.open-menu svg{
+    stroke: yellow;
+}
+
+
+
+/*Mensagem de Seja bem vindo*/
+
+.content{
+    display: none;
+}
+
+/*Mensagem de Seja bem vindo*/
+
+}
+
