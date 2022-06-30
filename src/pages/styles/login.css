@@ -1,0 +1,200 @@
+body{
+    background-image: url(../../images/background/25201.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+
+    font-family: 'DM Sans';
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+
+/*Geral */
+
+.login-links{
+    color: rgb(255, 204, 0);
+
+    font-weight: 900;
+}
+.login-links:hover{
+    color: rgb(217, 215, 215);
+
+    filter: brightness(1.5);
+    transition: 500ms;
+}
+
+/*Geral */
+
+
+/*Container Formulário de Login*/
+
+.container-form-login{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    margin-right: 5rem;
+}
+
+/*Formulário Login*/
+
+.form-login{
+    backdrop-filter: blur(50px);
+
+    margin-top: var(--nav-height);
+    padding: 6rem 2rem;
+    width: 47rem;
+
+    border-radius: 5rem;
+}
+.form-login{
+    box-shadow: 0 0 1em rgb(0, 5, 8);
+}
+
+/*Header - Login*/
+
+header{
+    width: 100%;
+    margin-block: 2rem;
+}
+
+header h1{
+    color: #fcf0d1;
+
+    margin-bottom: 3rem;
+    
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 4.4rem;
+    letter-spacing: 1rem;
+}
+
+header div{
+    display:  flex;
+    justify-content: left;
+    align-items: center;
+}
+
+header p{
+    color: white;
+
+    margin-left: 1rem;
+    display: inline-block;
+
+    text-align: left;
+    font-size: 1.7rem;
+    line-height: 2rem;
+}
+
+/*Header - Login*/
+
+
+/*Box-formulário*/
+
+.box-input{
+    width: 100%;
+    margin-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    text-align: left;
+    font-size: 2rem;
+}
+
+.box-input input{
+    background-color: #6a0b0089;
+    color: white;
+
+    width: 100%;
+    height: 5rem;
+    padding-left: 5rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    outline: 0;
+    font-size: 1.8rem;
+}
+.box-input input:focus{
+    border: 2px solid rgb(241, 239, 239);
+}
+
+.box-input input::placeholder{
+    color: rgb(244, 230, 230);
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+
+.box-input input[type="email"]{
+    background-image: url(../../assets/mail.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: calc(100% - 95%);
+}
+
+.box-input input[type="password"]{
+    background-image: url(../../assets/lock.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: calc(100% - 95%);
+}
+
+.box-check{
+    width: 100%;
+    margin-top: 2.5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-check div{
+    display: flex;
+    align-items: center;
+}
+
+.box-check input[type="checkbox"]{
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-right: 0.5rem;
+
+    cursor: pointer;
+}
+
+.box-login-btn button{
+    background-color: rgba(0, 0, 0, 0.795);
+    color: white;
+
+    width: 100%;
+    height: 5.5rem;
+    margin-block: 2rem;
+
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+
+    font-weight: 600;
+    line-height: 1.8rem;
+}
+.box-login-btn button:hover{
+    background-color: rgba(255, 253, 253, 0.264);
+    color: rgb(0, 0, 0);
+
+    filter: brightness(1.5);
+    transition: 500ms;
+}
+
+/*Box-formulário*/
+/*Formulário Login*/
+/*Container Formulário de Login*/

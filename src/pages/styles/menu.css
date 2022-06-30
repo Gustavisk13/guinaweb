@@ -1,0 +1,290 @@
+.navigation {
+    background-color: rgb(0, 0, 0);
+
+    width: 100vw;
+    height: var(--nav-height);
+
+    display: flex; 
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navigation .wrapper{
+    padding-right: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-logo img{
+    width: 20rem;
+    height: 100%;
+    max-width: 100%;
+}
+
+.navigation-menu, .close-menu{
+    position: fixed;
+}
+
+.open-menu, .close-menu{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.open-menu path{
+    stroke: rgb(252, 252, 252);
+    filter: brightness(100px);
+}
+
+/*<------------------------------->Nav Vertical<------------------------------->*/
+#container.menu-expanded{
+    overflow: hidden;
+}
+
+#container.menu-expanded > :not(nav){
+    visibility: hidden;
+}
+
+.navigation-menu, .close-menu, #container.menu-expanded .open-menu{
+    opacity: 0;
+    visibility: hidden;
+}
+
+#container.menu-expanded .navigation-menu,
+#container.menu-expanded .close-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.navigation-menu{
+    transform: translateY(100%);
+}
+
+#container.menu-expanded .navigation-menu{
+    background-color: rgb(0, 0, 0);
+
+    width: 100vw;
+    height: 100vh;
+
+    padding-top: var(--nav-height);
+
+    top: 0;
+    left: 0;
+
+    transition: transform 350ms;
+    transform:  translateY(0%);
+}
+
+.navigation-menu ul{
+    margin-top: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.1rem;
+}
+
+.navigation-menu ul li a{
+    color: yellow;
+
+    font-family: 'DM Sans';
+}
+
+#container.menu-expanded .navigation-logo{
+    position: relative;
+    z-index: 100;
+}
+
+#container.menu-expanded .close-menu,
+#container.menu-expanded .menu-register-button{
+    position: relative;
+    z-index: 100; 
+}
+
+.menu-register-button{
+    background-color: rgb(249, 211, 62);
+    color: rgb(0, 0, 0);
+
+    width: 27rem;
+    height: 5rem;
+
+    margin-inline: auto;
+
+    margin-top: 7rem;
+    margin-bottom: 8rem;
+    padding: 1.6rem 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'DM Sans';
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    border-radius: 4rem;
+}
+
+
+/*<------------------------------->Nav Vertical<------------------------------->*/
+
+/*Responsividade Desktop*/
+@media (min-width: 1024px){
+
+.wrapper{
+    width: min(112rem, 100%);
+}
+
+/* Reset */
+
+.navigation .wrapper *{
+    margin: 0;
+    padding: 0;
+
+    visibility: initial;
+    opacity: initial;
+    flex-direction: initial;
+    
+    position: initial;
+    font-size: initial;
+
+    transform: initial;
+  }
+
+.navigation .close-menu,
+.navigation .open-menu{
+    display: none;
+}
+
+
+.navigation .navigation-menu{
+    color: white;
+    
+    height: 100%;
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation-menu ul{
+
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navigation-menu li{
+
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.navigation-menu li:hover{
+    transition: border 0.1s;
+    border-bottom: 2px solid yellow;
+}
+
+.navigation-menu  li a{
+    font-family: 'DM Sans';
+}
+.navigation-menu li a:hover{
+    font-size: 1.8rem;
+}
+
+.menu-register-button{
+    width: 20rem;
+    height: 5rem;
+}
+
+
+}
+
+
+
+
+/*Responsividade Desktop*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+.navigation-menu ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    gap: 15rem;
+}
+
+.navigation-menu li{
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 0px solid yellow;
+}
+
+.navigation-menu a{
+    color: white;
+}
+
+
+
+Animações
+
+.menu-register-button:hover{
+    background-color: rgba(255, 253, 253, 0.264);
+    color: rgb(255, 255, 255);
+
+    filter: brightness(1.5);
+    transition: 500ms;
+}
+
+.navigation-menu li a:hover{
+    color: yellow;
+
+    font-size: 1.8rem;
+}
+
+.navigation-menu li:hover{
+    content: '';
+    transition: border 0.1s;
+    border-bottom: 2px solid yellow;
+}
+
+*/

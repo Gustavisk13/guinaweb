@@ -3,12 +3,17 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    list-style: none;
 }
 
 :root{
     font-size: 62.5%;
 
-    --container-login-Background-color: hsl(20, 98%, 33%);
+    --nav-height: 8rem;
+}
+
+html{
+    scroll-behavior: smooth;
 }
 
 body,html{
