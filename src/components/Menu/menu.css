@@ -11,8 +11,9 @@
 }
 
 .navigation .wrapper{
-    padding-right: 1rem;
+    width: 100%;
 
+    padding-right: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -114,12 +115,9 @@
     color: rgb(0, 0, 0);
 
     width: 27rem;
-    height: 5rem;
+    height: 5.5rem;
 
-    margin-inline: auto;
-
-    margin-top: 7rem;
-    margin-bottom: 8rem;
+    margin: 8rem auto;
     padding: 1.6rem 3.2rem;
 
     display: flex;
@@ -128,12 +126,12 @@
 
     font-family: 'DM Sans';
     font-weight: 900;
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 2.3rem;
     text-decoration: none;
     text-transform: uppercase;
 
-    border-radius: 4rem;
+    border-radius: 3.5rem;
 }
 
 
@@ -180,12 +178,14 @@
 }
 
 .navigation-menu ul{
-
     height: 100%;
+
+    margin-inline: 5rem;
 
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    gap: 5rem;
 }
 
 .navigation-menu li{
@@ -212,79 +212,13 @@
 .menu-register-button{
     width: 20rem;
     height: 5rem;
+
+    margin: 0 2rem !important;
+}
+.menu-register-button:hover{
+    filter: brightness(1.5);
 }
 
-
 }
-
-
-
 
 /*Responsividade Desktop*/
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-
-
-
-.navigation-menu ul{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    list-style: none;
-
-    gap: 15rem;
-}
-
-.navigation-menu li{
-    width: 10rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-bottom: 0px solid yellow;
-}
-
-.navigation-menu a{
-    color: white;
-}
-
-
-
-Animações
-
-.menu-register-button:hover{
-    background-color: rgba(255, 253, 253, 0.264);
-    color: rgb(255, 255, 255);
-
-    filter: brightness(1.5);
-    transition: 500ms;
-}
-
-.navigation-menu li a:hover{
-    color: yellow;
-
-    font-size: 1.8rem;
-}
-
-.navigation-menu li:hover{
-    content: '';
-    transition: border 0.1s;
-    border-bottom: 2px solid yellow;
-}
-
-*/

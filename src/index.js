@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Login from './pages/Home';
-
 import './pages/styles/global.css';
-import "./pages/styles/menu.css";
-
+import Menu from './components/Menu/menu.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

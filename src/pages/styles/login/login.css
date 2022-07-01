@@ -1,5 +1,5 @@
 body{
-    background-image: url(../../images/background/25201.jpg);
+    background-image: url(../../../images/background/25201.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -7,7 +7,7 @@ body{
     color: white;
 
     font-family: 'DM Sans';
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     text-align: center;
 }
 
@@ -38,18 +38,16 @@ body{
     display: flex;
     align-items: center;
     justify-content: right;
-
-    margin-right: 5rem;
 }
 
 /*Formulário Login*/
 
 .form-login{
     backdrop-filter: blur(50px);
-
-    margin-top: var(--nav-height);
-    padding: 6rem 2rem;
+    
     width: 47rem;
+
+    padding: 6rem 2rem;
 
     border-radius: 5rem;
 }
@@ -69,7 +67,7 @@ header h1{
 
     margin-bottom: 3rem;
     
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 900;
     line-height: 4.4rem;
     letter-spacing: 1rem;
@@ -88,7 +86,7 @@ header p{
     display: inline-block;
 
     text-align: left;
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 2rem;
 }
 
@@ -127,22 +125,24 @@ header p{
 }
 
 .box-input input::placeholder{
-    color: rgb(244, 230, 230);
+    color: rgb(255, 255, 255);
+
+    font-family: 'DM Sans';
 
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2rem;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
 }
 
 .box-input input[type="email"]{
-    background-image: url(../../assets/mail.svg);
+    background-image: url(../../../assets/mail.svg);
     background-repeat: no-repeat;
     background-position: left;
     background-position-x: calc(100% - 95%);
 }
 
 .box-input input[type="password"]{
-    background-image: url(../../assets/lock.svg);
+    background-image: url(../../../assets/lock.svg);
     background-repeat: no-repeat;
     background-position: left;
     background-position-x: calc(100% - 95%);

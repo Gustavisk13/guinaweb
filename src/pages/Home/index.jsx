@@ -1,14 +1,10 @@
 import ScrollReveal from "scrollreveal";
 import logo from "../../images/logo/logo.jpg";
 
-import "../styles/login.css";
+import "../styles/login/login.css";
 
-import "../styles/loginmobile.css";
-import "..//styles/logindesktop.css";
-
-
-
-
+import "../styles/login/loginmobile.css";
+import "../styles/login/logindesktop.css";
 
 
 ScrollReveal({origin: 'top',distance: '10px',duration: 700,}).reveal(".navigation-logo, .navigation-menu, .card, .form-login");
