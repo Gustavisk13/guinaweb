@@ -1,5 +1,5 @@
 .navigation {
-    background-color: rgb(0, 0, 0);
+    /* background-color: rgb(0, 0, 0);*/
 
     width: 100vw;
     height: var(--nav-height);
@@ -13,7 +13,6 @@
 .navigation .wrapper{
     width: 100%;
 
-    padding-right: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,9 +93,7 @@
 }
 
 .navigation-menu ul li a{
-    color: yellow;
-
-    font-family: 'DM Sans';
+    color: rgb(255, 255, 255);
 }
 
 #container.menu-expanded .navigation-logo{
@@ -111,7 +108,7 @@
 }
 
 .menu-register-button{
-    background-color: rgb(249, 211, 62);
+    background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 
     width: 27rem;
@@ -124,7 +121,6 @@
     align-items: center;
     justify-content: center;
 
-    font-family: 'DM Sans';
     font-weight: 900;
     font-size: 2rem;
     line-height: 2.3rem;
@@ -141,6 +137,8 @@
 @media (min-width: 1024px){
 
 .wrapper{
+    padding-inline: 1.5rem 0rem;
+
     width: min(112rem, 100%);
 }
 
@@ -174,7 +172,7 @@
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: right;
 }
 
 .navigation-menu ul{
@@ -203,7 +201,7 @@
 }
 
 .navigation-menu  li a{
-    font-family: 'DM Sans';
+    font-family: 'Montserrat';
 }
 .navigation-menu li a:hover{
     font-size: 1.8rem;
@@ -216,6 +214,7 @@
     margin: 0 2rem !important;
 }
 .menu-register-button:hover{
+    background-color: yellow;
     filter: brightness(1.5);
 }
 

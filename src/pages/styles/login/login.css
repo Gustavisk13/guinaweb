@@ -1,12 +1,7 @@
 body{
-    background-image: url(../../../images/background/25201.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
     color: white;
 
-    font-family: 'DM Sans';
+    font-family: 'Montserrat';
     font-size: 1.8rem;
     text-align: center;
 }
@@ -43,16 +38,18 @@ body{
 /*Formulário Login*/
 
 .form-login{
+    background-color: rgb(0, 0, 0, 50%);
     backdrop-filter: blur(50px);
     
     width: 47rem;
 
     padding: 6rem 2rem;
-
-    border-radius: 5rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 1rem 10rem 1rem 10rem;
 }
 .form-login{
-    box-shadow: 0 0 1em rgb(0, 5, 8);
+    box-shadow: 40px 50px 50px 10px rgb(0, 0, 0);   
+    
 }
 
 /*Header - Login*/
@@ -65,7 +62,7 @@ header{
 header h1{
     color: #fcf0d1;
 
-    margin-bottom: 3rem;
+    margin-bottom: 3.2rem;
     
     font-size: 4.5rem;
     font-weight: 900;
@@ -108,9 +105,6 @@ header p{
 }
 
 .box-input input{
-    background-color: #6a0b0089;
-    color: white;
-
     width: 100%;
     height: 5rem;
     padding-left: 5rem;
@@ -121,13 +115,13 @@ header p{
     font-size: 1.8rem;
 }
 .box-input input:focus{
-    border: 2px solid rgb(241, 239, 239);
+    border: 3px solid rgb(255, 200, 2);
 }
 
 .box-input input::placeholder{
-    color: rgb(255, 255, 255);
+    color: rgb(36, 36, 36);
 
-    font-family: 'DM Sans';
+    font-family: 'Montserrat';
 
     font-weight: 400;
     font-size: 1.7rem;
@@ -138,14 +132,14 @@ header p{
     background-image: url(../../../assets/mail.svg);
     background-repeat: no-repeat;
     background-position: left;
-    background-position-x: calc(100% - 95%);
+    background-position-x: calc(100% - 96%);
 }
 
 .box-input input[type="password"]{
     background-image: url(../../../assets/lock.svg);
     background-repeat: no-repeat;
     background-position: left;
-    background-position-x: calc(100% - 95%);
+    background-position-x: calc(100% - 96%);
 }
 
 .box-check{
@@ -171,8 +165,8 @@ header p{
 }
 
 .box-login-btn button{
-    background-color: rgba(0, 0, 0, 0.795);
-    color: white;
+    background-color:  #D9D9D9;
+    color: rgb(0, 0, 0);
 
     width: 100%;
     height: 5.5rem;
@@ -189,7 +183,7 @@ header p{
 }
 .box-login-btn button:hover{
     background-color: rgba(255, 253, 253, 0.264);
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
     filter: brightness(1.5);
     transition: 500ms;
