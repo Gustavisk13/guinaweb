@@ -1,7 +1,12 @@
-@media(min-width: 320px){
+@media(min-width: 100px){
 
 .container-aside-login .wrapper{
-    margin-top: var(--nav-height);
+    height: 100vh;
+    padding-top: var(--nav-height);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .wrapper{
@@ -15,8 +20,6 @@
     stroke: yellow;
 }
 
-
-
 /*Mensagem de Seja bem vindo*/
 
 .content{
@@ -26,4 +29,3 @@
 /*Mensagem de Seja bem vindo*/
 
 }
-

@@ -1,14 +1,10 @@
 import ScrollReveal from "scrollreveal";
 import logo from "../../images/logo/logo.jpg";
 
-import "../styles/login.css";
+import "../styles/login/login.css";
 
-import "../styles/loginmobile.css";
-import "..//styles/logindesktop.css";
-
-
-
-
+import "../styles/login/loginmobile.css";
+import "../styles/login/logindesktop.css";
 
 
 ScrollReveal({origin: 'top',distance: '10px',duration: 700,}).reveal(".navigation-logo, .navigation-menu, .card, .form-login");
@@ -41,10 +37,12 @@ function Login() {
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">Sobre nós</a></li>
                                 <li><a href="#">Notícias</a></li>
-                                <li><a href="#">Calendário</a></li>
                                 <li><a href="#">Guinaverso</a></li>
+                                
+
+                                <a className="menu-register-button" href="#">Register</a>
                             </ul>
-                            <a className="menu-register-button" href="#">Register</a>
+                            
                         </div>
                         {/*<----- navigation-menu ----->*/}
 
@@ -86,35 +84,11 @@ function Login() {
                                 <header>
                                     <h1>Login</h1>
                                     <div>
-                                        <svg
-                                    width="24"
-                                    height="24"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                    <path
-                                        d="M15 3H19C19.5304 3 20.0391 3.21071 20.4142 3.58579C20.7893 3.96086 21 4.46957 21 5V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H15"
-                                        stroke="#FFC632"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                    <path
-                                        d="M10 17L15 12L10 7"
-                                        stroke="#FFC632"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                    <path
-                                        d="M15 12H3"
-                                        stroke="#FFC632"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    />
-                                        </svg>
+                                    <svg 
+                                        width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.0107 25.0801V3.58287H12.0061V0H24.0122V28.663H12.0061V25.0801H21.0107ZM10.5083 23.2923L18.0092 14.3315L10.5053 5.37431L8.38027 7.91099L12.2642 12.5401H0V16.1229H12.2642L8.38327 20.7556L10.5083 23.2923Z" fill="#E6B404"/>
+                                    </svg>
+
                                         <p>Entre com suas informações de cadastro</p>
                                     </div>
                                 </header>
