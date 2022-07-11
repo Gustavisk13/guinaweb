@@ -1,8 +1,6 @@
 import ScrollReveal from "scrollreveal";
 import logo from "../../images/logo/logo.jpg";
-
 import "../styles/login/login.css";
-
 import "../styles/login/loginmobile.css";
 import "../styles/login/logindesktop.css";
 
