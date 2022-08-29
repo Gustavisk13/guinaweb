@@ -1,5 +1,10 @@
 import ScrollReveal from "scrollreveal";
 import logo from "../../images/logo/logo.jpg";
+
+import { useNavigate } from "react-router-dom";
+import api from "../../config/api";
+import React, { useState } from "react";
+
 import "../styles/login/login.css";
 import "../styles/login/loginmobile.css";
 import "../styles/login/logindesktop.css";
@@ -18,6 +23,28 @@ function closeMenu(){
 
 
 function Login() {
+
+    const [email, setEmail] = useState("");
+    const [senha, setPassword] = useState("");
+
+    const navigate = useNavigate();
+
+    const handleLogin = async (e) => {
+        e.preventDefault();
+        const data = {
+            email,
+            senha
+        };
+        try {
+            console.log(data);
+            const response = await api.post("/auth", data);
+            localStorage.setItem("token", response.data.token);
+            navigate.push("/text");
+        } catch (error) {
+            alert("Usuário ou senha inválidos");
+        }
+    }
+
   return (
     <>
         <div id="container">
@@ -77,7 +104,7 @@ function Login() {
                         </aside>
                     
 
-                        <form className="container-form-login" action="">
+                        <form className="container-form-login" onSubmit={handleLogin} >
                             <div className="form-login">
                                 <header>
                                     <h1>Login</h1>
@@ -94,12 +121,12 @@ function Login() {
 
                                 <div className="box-input">
                                     <label htmlFor="Email">Email:</label>
-                                    <input type="Email" placeholder="Digite seu email" />
+                                    <input type="email" placeholder="Digite seu email" className="input" value={email} onChange={(e) => setEmail(e.target.value)} />
                                 </div>
 
                                 <div className="box-input">
                                     <label htmlFor="password">Senha:</label>
-                                    <input type="password" placeholder="Digite sua senha" />
+                                    <input type="password" placeholder="Digite sua senha" className="input" value={senha} onChange={(e) => setPassword(e.target.value)}/>
                                 </div>
 
 
