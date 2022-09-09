@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root{
+    font-size: 62.5%;
+    
+    --text-color: #ffff;
+    --link-color: #FFE711;
+    --background-color: #262626;
+
+    --nav-height: 8rem;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: 'Montserrat';
+    font-size: 1.6rem;
+    color: white;
+}
