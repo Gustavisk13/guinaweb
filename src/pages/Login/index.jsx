@@ -38,8 +38,9 @@ function Login() {
         try {
             console.log(data);
             const response = await api.post("/auth", data);
+            console.log(response.data.token);
             localStorage.setItem("token", response.data.token);
-            navigate.push("/text");
+            navigate("/text");
         } catch (error) {
             alert("Usuário ou senha inválidos");
         }
