@@ -47,10 +47,6 @@
   width: 10rem;
   height: 100%;
 }
-.navigation .wrapper .navigationMenu ul li:hover {
-  transition: border 0.1s;
-  border-bottom: 0.3rem solid yellow;
-}
 .navigation .wrapper .navigationMenu ul li a {
   color: white;
 }

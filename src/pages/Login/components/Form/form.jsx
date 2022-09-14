@@ -17,7 +17,6 @@ function form() {
                     </div>
                 </header>
 
-
                 <div className={styles.boxinput}>
                     <label htmlFor="Email">Email:</label>
                     <input type="Email" placeholder="Digite seu email" />
@@ -29,21 +28,23 @@ function form() {
                 </div>
 
                 
-                    <div className={styles.checkbox}>
-                        <div>
-                            <input type="checkbox" />
-                            <label htmlFor="Lembre-me">Lembre-me</label>
-                        </div>
-
-                        <a className={styles.links} href="#">Esqueci minha senha</a>
+                <div className={styles.checkbox}>
+                    <div>
+                        <input type="checkbox" />
+                        <label htmlFor="Lembre-me">Lembre-me</label>
                     </div>
 
-                    <div className={styles.boxloginbtn}>
-                        <button>Entrar</button>
-                    </div>
+                    <a className={styles.links} href="#">Esqueci minha senha</a>
+                </div>
 
-                <span>Não possui uma conta? </span>
-                <a className={styles.links} href="#">Registre-se</a>
+                <div className={styles.boxloginbtn}>
+                    <button>Entrar</button>
+                </div>
+
+                <div className={styles.notHaveCount}>
+                    <span>Não possui uma conta? </span>
+                    <a className={styles.links} href="#">Registre-se</a>
+                </div>
             </div>
         </form>
     </>
