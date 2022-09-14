@@ -1,6 +1,13 @@
 import styles from './footer.module.css';
 import LogoGuina from '../../images/logo/logo.jpg';
 
+import { FaInstagram } from 'react-icons/fa';
+import { FaDiscord } from 'react-icons/fa';
+import { FaTwitch } from 'react-icons/fa';
+import { FaTwitter } from 'react-icons/fa';
+import { FaYoutube } from 'react-icons/fa';
+
+
 function Footer() {
   return (
     <>
@@ -17,11 +24,11 @@ function Footer() {
             <div className={styles.containerSocialLinks}>
                 <p>Rede Socais</p>
                 <ul>
-                    <li><a>1</a></li>
-                    <li><a>2</a></li>
-                    <li><a>3</a></li>
-                    <li><a>4</a></li>
-                    <li><a>5</a></li>
+                    <li><a><FaInstagram/></a></li>
+                    <li><a><FaDiscord/></a></li>
+                    <li><a><FaTwitch/></a></li>
+                    <li><a><FaTwitter/></a></li>
+                    <li><a><FaYoutube/></a></li>
                 </ul>
                 <p>Copyright© 2022 Guina Rangers. All rights reserved</p>
             </div>

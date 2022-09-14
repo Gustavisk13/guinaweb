@@ -25,6 +25,15 @@ footer{
 
     .containerSocialLinks{
         background-color: brown;
+        text-align: center;
+
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6.5rem;
+            margin-block: 5rem;
+        }
     }
 
     .containerMenuFooter{
