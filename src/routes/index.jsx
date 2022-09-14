@@ -2,8 +2,7 @@ import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Login from "../pages/Login";
 import NotFound from "../pages/NotFound";
-import MarkDowm from '../pages/MarkDownEditor';
-import Ckeditor from "../components/Ckeditor";
+import TextEditor from '../pages/TextEditor';
 
 function RoutesWeb() {
     return (
@@ -11,10 +10,9 @@ function RoutesWeb() {
             <Routes>
                 <Route path="/" element={<Login/>} />
                 <Route path="/login" element={<Login/>} />
-                <Route path="/markdown" element={<MarkDowm/>} />
+                <Route path="/textEditor" element={<TextEditor/>} />
                 <Route path="*" element={<NotFound/>} />
 
-                <Route path="/text" element={<Ckeditor/>} />
             </Routes>
         </BrowserRouter>
     );

@@ -1,5 +1,4 @@
-
-import ReactMarkDown from '../../components/MarkDown-Editor/MarkDown';
+import ReactMarkDown from './components/MarkDown-Editor/MarkDown';
 import styles from './styles.module.css'
 
 function index() {

@@ -102,14 +102,14 @@ header p{
 }
 
 .boxinput input[type="email"]{
-    background-image: url(../../assets/mail.svg);
+    background-image: url(../../../../assets/mail.svg);
     background-repeat: no-repeat;
     background-position: left;
     background-position-x: calc(100% - 96%);
 }
 
 .boxinput input[type="password"]{
-    background-image: url(../../assets/lock.svg);
+    background-image: url(../../../../assets/lock.svg);
     background-repeat: no-repeat;
     background-position: left;
     background-position-x: calc(100% - 96%);
