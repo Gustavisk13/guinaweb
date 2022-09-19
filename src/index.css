@@ -30,5 +30,6 @@ body{
     background-color: var(--background-color);
     font-family: 'Montserrat';
     font-size: 1.6rem;
+    font-weight: 700;
     color: white;
 }

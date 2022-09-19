@@ -15,10 +15,10 @@ function menu() {
                     <ul>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Sobre nós</a></li>
-                        <li><a href="markdown">Notícias</a></li>
+                        <li><a href="TextEditor">Notícias</a></li>
                         <li><a href="#">Guinaverso</a></li>
                     </ul> 
-                    <a className={styles.menuRegisterButton} href="#">Register</a>
+                    <a className={styles.menuButton} href="#">Register</a>
                 </div>
                 {/*<----- navigation-menu ----->*/}
             </div>

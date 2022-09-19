@@ -1,5 +1,6 @@
-import Formlogin from '../../components/Form/form';
-import Welcome from '../../components/Welcome/welcome';
+import Formlogin from './components/Form/form';
+import Welcome from './components/Welcome/welcome';
+
 
 import styles from './styles.module.css';
 
