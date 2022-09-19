@@ -1,7 +1,7 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "../pages/Login";
-import NotFound from "../pages/NotFound";
+import Login from "../pages/Login/index";
+import NotFound from "../pages/NotFound/index";
 import TextEditor from '../pages/TextEditor';
 
 function RoutesWeb() {
