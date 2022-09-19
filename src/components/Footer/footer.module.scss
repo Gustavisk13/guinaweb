@@ -1,42 +1,124 @@
+@mixin menuDisplay{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .gradient{
     height: 8rem;
     background: linear-gradient(to bottom, rgba(38,38,38,100%), rgba(18,18,18,100%));
 }
 
 footer{
+    @include menuDisplay();
+
     width: 100%;
-    height: 40rem;
+    height: 40.3rem;
     padding-inline: 9rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: inherit;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.60);
 
     .containerLogoAndMessage{
-        background-color: blue;
+        @include menuDisplay();
+
+        flex-direction: column;
+        height: 8.5rem;
+        margin-top: 5rem;
+        // background-color: blue;
 
         .guinaRangerLogo img{
             width: 43rem;
             height: 6rem;
             max-width: 100%;
-            background-color: rgba(240, 248, 255, 0.205);
+            // background-color: rgba(240, 248, 255, 0.205);
+        }
+        .fraseLogo{
+            text-align: center;
+            font-style: italic;
+            font-weight: 300;
+            font-size: 2rem;
+            line-height: 2.4rem;
         }
     }
 
     .containerSocialLinks{
-        background-color: brown;
         text-align: center;
+        margin-top: 22.5rem;
+        padding-inline: 2rem;
+        // background-color: brown;
+
+        .redeSociaisText{
+            font-weight: 800;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            // background-color: blue;
+        }
 
         ul{
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include menuDisplay();
+
+            align-items: left;
             gap: 6.5rem;
-            margin-block: 5rem;
+            margin-block: 4rem;
+            // background-color: aqua;
+
+            li{ 
+                a{
+                    @include menuDisplay();
+
+                    font-size: 2.5rem;
+                    cursor: pointer;
+                }
+                &:hover{
+                    transform: scale(1.5);
+                    color: rgba(255, 231, 17, 1);
+                }
+            }
+
+        }
+        .copyright{
+            margin-top: 5rem;
+            font-weight: 400;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+            font-style: italic;
         }
     }
 
     .containerMenuFooter{
-        background-color: coral;
+        height: 12rem;
+        padding: 1rem;
+        margin-top: 7rem;
+        text-align: center;
+        // background-color: rgb(24, 55, 149);
+
+        .containeruls{
+            @include menuDisplay();
+            gap: 7rem;
+            // background-color: rgb(197, 51, 7);
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 0.7rem;
+                // background-color: aqua;
+
+                p{
+                    margin-bottom: 0.7rem;
+                    font-size: 1.8rem; 
+                    font-weight: 600;
+                    line-height: 2.2rem;
+                }
+
+                li{
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 1.7rem;
+
+                }
+            }
+        }
     }
 }

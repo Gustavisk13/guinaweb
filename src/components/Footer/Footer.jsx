@@ -18,32 +18,45 @@ function Footer() {
                     <img src={LogoGuina} alt="Guina_Rangers_Logo" title="Logo_da_GuinaRangers"/>
                 </a>
                 
-                <p>Unindo Pessoas e Compartilhando Sentimentos</p>
+                <p className={styles.fraseLogo}>Unindo Pessoas e Compartilhando Sentimentos</p>
             </div>
 
             <div className={styles.containerSocialLinks}>
-                <p>Rede Socais</p>
+                <p className={styles.redeSociaisText}>Rede Socais</p>
                 <ul>
+                    <li><a><FaYoutube/></a></li>
                     <li><a><FaInstagram/></a></li>
                     <li><a><FaDiscord/></a></li>
-                    <li><a><FaTwitch/></a></li>
                     <li><a><FaTwitter/></a></li>
-                    <li><a><FaYoutube/></a></li>
+                    <li><a><FaTwitch/></a></li>
                 </ul>
-                <p>Copyright© 2022 Guina Rangers. All rights reserved</p>
+                <p className={styles.copyright}>Copyright© 2022 Guina Rangers. All rights reserved</p>
             </div>
 
             <div className={styles.containerMenuFooter}>
-                <ul>
-                    <li>1</li>
-                </ul>
+                <ul className={styles.containeruls}>
+                    <ul>
+                        <p>GUINA</p>
 
-                <ul>
-                    <li>1</li>
-                </ul>
+                        <li>Sobre nós</li>
+                        <li>Membros</li>
+                        <li>História</li>
+                    </ul>
+                    <ul>
+                        <p>GRUPO</p>
 
-                <ul>
-                    <li>1</li>
+                        <li>Regras</li>
+                        <li>Ambiente Dev</li>
+                        <li>RPG</li>
+
+                    </ul>
+                    <ul>
+                        <p>SITE</p>
+
+                        <li>Serviços</li>
+                        <li>Reporte um Bug</li>
+                        <li>FeedBack</li>
+                    </ul>
                 </ul>
             </div>
         </footer>
