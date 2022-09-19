@@ -65,21 +65,21 @@
 .containerformlogin .formlogin input::-moz-placeholder {
   color: rgb(36, 36, 36);
   font-family: "Montserrat";
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.7rem;
   line-height: 2.5rem;
 }
 .containerformlogin .formlogin input:-ms-input-placeholder {
   color: rgb(36, 36, 36);
   font-family: "Montserrat";
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.7rem;
   line-height: 2.5rem;
 }
 .containerformlogin .formlogin input::placeholder {
   color: rgb(36, 36, 36);
   font-family: "Montserrat";
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.7rem;
   line-height: 2.5rem;
 }
