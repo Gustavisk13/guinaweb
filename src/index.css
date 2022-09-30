@@ -28,6 +28,7 @@ body,html{
 
 body{
   background-color: var(--background-color);
+  /* padding-top: var(--nav-height); */
   font-family: 'Montserrat';
   font-size: 1.6rem;
   font-weight: 700;

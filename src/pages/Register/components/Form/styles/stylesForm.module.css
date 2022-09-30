@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40rem;
+  height: 60rem;
+  flex-direction: column;
+  padding-block: 4rem;
+  padding-inline: 2.8rem;
+  border: 0.1rem solid #000000;
+  border-radius: 5rem;
+  box-shadow: 5rem 5rem 5rem rgba(3, 0, 0, 0.83);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container .titulo {
+  padding-bottom: 3rem;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+.container .inputsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container .inputsContainer .boxinput label {
+  margin-bottom: 1.2rem;
+  display: block;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+.container .inputsContainer .boxinput input {
+  width: 33.2rem;
+  height: 4.5rem;
+  border: none;
+  border-radius: 1rem;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-position-x: 5%;
+}
+.container .inputsContainer .boxinput input::-moz-placeholder {
+  padding-left: 5.5rem;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+.container .inputsContainer .boxinput input:-ms-input-placeholder {
+  padding-left: 5.5rem;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+.container .inputsContainer .boxinput input::placeholder {
+  padding-left: 5.5rem;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+.container .inputsContainer .boxinput input[type=password] {
+  background-image: url("../../../../../assets/lock.svg");
+}/*# sourceMappingURL=stylesForm.module.css.map */
