@@ -84,7 +84,7 @@ function form() {
 
           <div className={styles.notHaveCount}>
             <span>Não possui uma conta? </span>
-            <a className={styles.links} href="#">
+            <a className={styles.links} href="Register">
               Registre-se
             </a>
           </div>

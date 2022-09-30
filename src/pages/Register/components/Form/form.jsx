@@ -41,7 +41,11 @@ function form() {
               fontWeight: '700',
               lineHeight: '1.5rem',
               fontSize: '1.6rem',
-              padding: '2.5rem'
+              padding: '2.5rem',
+              '&:hover': {
+                backgroundColor: 'rgba(255, 253, 253, 0.264)',
+                color: 'white'
+              }
             }
             } variant="contained">REGISTRAR</Button>
         </form>

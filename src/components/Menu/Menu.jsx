@@ -1,10 +1,14 @@
 import logo from '../../images/logo/logo.jpg'
 import styles from './menu.module.css'
+import { useRef, useLayoutEffect } from 'react';
+
 
 function menu() {
+  
+
   return (
     <>
-        <nav className={styles.navigation}>
+        <nav className={styles.navigation} >
             <div className={styles.wrapper}>
                 <a className={styles.logo} href="#home">
                     <img src={logo} alt="Guina Rangers Logo" title="Logo_da_GuinaRangers" />
@@ -18,7 +22,7 @@ function menu() {
                         <li><a href="TextEditor">Notícias</a></li>
                         <li><a href="#">Guinaverso</a></li>
                     </ul> 
-                    <a className={styles.menuButton} href="#">Register</a>
+                    <a className={styles.menuButton} href="Register">Register</a>
                 </div>
                 {/*<----- navigation-menu ----->*/}
             </div>
