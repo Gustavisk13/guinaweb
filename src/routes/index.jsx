@@ -1,23 +1,28 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Login from "../pages/Login/index";
-import Register from '../pages/Register/index';
-import NotFound from "../pages/NotFound/index";
-import TextEditor from '../pages/TextEditor';
+import Login from "../components/Pages/Login/Login";
+import Register from "../components/Pages/Register/Register";
+import NotFound from "../components/Pages/NotFound/NotFound";
+import TextEditor from "../components/Pages/TextEditor/TextEditor";
+
+import Menu from '../components/Layout/Menu/Menu'
+import Footer from '../components/Layout/Footer/Footer'
 
 function RoutesWeb() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Login/>} />
-                <Route path="/login" element={<Login/>} />
-                <Route path="/textEditor" element={<TextEditor/>} />
-                <Route path="/register" element={<Register/>} />
+      <BrowserRouter>
+        <Menu />
 
-                <Route path="*" element={<NotFound/>} />
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/textEditor" element={<TextEditor />} />
+          <Route path="/register" element={<Register />} />
 
-            </Routes>
-        </BrowserRouter>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer/>
+      </BrowserRouter>
     );
 };
 

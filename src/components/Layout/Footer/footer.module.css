@@ -1,7 +1,7 @@
-.gradient {
+/* footer .gradient {
   height: 8rem;
   background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(18, 18, 18));
-}
+} */
 
 footer {
   display: flex;
