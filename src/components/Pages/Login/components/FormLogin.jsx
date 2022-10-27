@@ -1,43 +1,31 @@
-import { useState } from "react";
-import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
-
-import API from "../../../../Hooks/Api/api";
 import Input from "../../../Form/Input";
 import SubmitButton from "../../../Form/SubmitButton";
 
+
 import styles from "./FormLogin.module.css";
 import { BiLogIn } from 'react-icons/bi'
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../Contexts/Auth/AuthContext";
 
 function Form() {
-  const [email, setEmail] = useState("");
-  const [senha, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  // Navegar pela página
-  const navigate = useNavigate();
+  const auth = useContext(AuthContext);
 
-  // Todas as conexões http é assícrono.
   const handleLogin = async (e) => {
-    e.preventDefault();
-    const data = {
-      email,
-      senha,
-    };
-
-    // Toda conexão http tem que estar em um try cat, pois existe grande chance de dar erros
-    try {
-        console.log(data);
-        // await é o ponto de espera da função assi.
-        const response = await API.post("/auth", data);
-        console.log(response.data.token);
-        localStorage.setItem("token", response.data.token);
-        navigate("/textEditor");
-    } catch (error) {
-        alert("Deu ZIKA");
+    e.preventDefault()
+    if(email && password){
+      const isLogged = await auth.signin(email, password); // vamos mandar para o contexto, o contexto vai mandar para a requisição e vai retornar somente true or false.
+      if(isLogged){
+        Navigate('texteditor')
+      }else{
+        alert('Cadastro não identificado!')
+      }
     }
-    //usuários é a rota de criar usuários.
-};
+  }
 
   return (
     <form className={styles.form} onSubmit={handleLogin}>
@@ -51,10 +39,12 @@ function Form() {
         </header>
 
         <div className={styles.boxinput}>
-          <Input 
-            type="email" 
-            text="E-mail :" 
-            placeholder="Digite seu E-mail" 
+          <Input
+            type="email"
+            text="E-mail :"
+            value={email}
+            placeholder="Digite seu E-mail"
+            handleOnChange={(e) => setEmail(e.target.value)}
           />
         </div>
 
@@ -62,7 +52,9 @@ function Form() {
           <Input
             type="password"
             text="Password :"
+            value={password}
             placeholder="Digite sua Senha"
+            handleOnChange={(e) => setPassword(e.target.value)}
           />
         </div>
 
