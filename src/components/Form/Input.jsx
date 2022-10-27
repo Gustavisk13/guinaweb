@@ -17,6 +17,7 @@ function Input({type, text, name, placeholder, handleOnChange, value}) {
           id={name}
           onChange={handleOnChange}
           value={value}
+          autoComplete='on'
         />
       </div>
     </div>

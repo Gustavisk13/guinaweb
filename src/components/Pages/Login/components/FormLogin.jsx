@@ -3,7 +3,7 @@ import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 
-import API from "../../../Api/api";
+import API from "../../../../Hooks/Api/api";
 import Input from "../../../Form/Input";
 import SubmitButton from "../../../Form/SubmitButton";
 
@@ -19,8 +19,7 @@ function Form() {
 
   // Todas as conexões http é assícrono.
   const handleLogin = async (e) => {
-    e.preventDefault(); //?
-
+    e.preventDefault();
     const data = {
       email,
       senha,
