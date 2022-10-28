@@ -8,6 +8,10 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
   const [user, setUser] = useState<User | null>(null);
   const api = useApi();
 
+  // Após salvar o Token no localStorage
+    // Toda vez que acessarmos a página, vamos verificar se o localStorage existe, validar o usuário
+      // e depois preencher o 'user'
+  // Sem isso, sempre que atualizarmos a página, ele vai vir deslogado
   useEffect(() => {
     // Não é recomendado usar uma async dentro do useEffect, é necessário criar uma função dentro do mesmo.
     const validateToken = async () => {
@@ -21,15 +25,15 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
           setUser(data.user);
         }
       }
-    } 
+    }
     validateToken()
   }, [api]);
 
   // Não vamos fazer a requisição para a Api diretamente aqui, colocando em cada função a URL diretamente, vamos usar um hook para isso.
-  const signin = async (email: string, password: string) => {
-    const data = await api.signin(email, password);
+  const signin = async (email: string, senha: string) => {
+    const data = await api.signin(email, senha);
     if(data.user && data.token){
-      setUser(data.user) 
+      setUser(data.user);
       setToken(data.token); // toda vez que fizermo o login, vamos salvar o token no localstore
       return true;
     }

@@ -11,16 +11,16 @@ import { AuthContext } from "../../../Contexts/Auth/AuthContext";
 
 function Form() {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [senha, setSenha] = useState('');
 
   const auth = useContext(AuthContext);
 
   const handleLogin = async (e) => {
     e.preventDefault()
-    if(email && password){
-      const isLogged = await auth.signin(email, password); // vamos mandar para o contexto, o contexto vai mandar para a requisição e vai retornar somente true or false.
+    if(email && senha){
+      const isLogged = await auth.signin(email, senha); // vamos mandar para o contexto, o contexto vai mandar para a requisição e vai retornar somente true or false.
       if(isLogged){
-        Navigate('texteditor')
+        Navigate('texteditor');
       }else{
         alert('Cadastro não identificado!')
       }
@@ -42,7 +42,6 @@ function Form() {
           <Input
             type="email"
             text="E-mail :"
-            value={email}
             placeholder="Digite seu E-mail"
             handleOnChange={(e) => setEmail(e.target.value)}
           />
@@ -52,9 +51,8 @@ function Form() {
           <Input
             type="password"
             text="Password :"
-            value={password}
             placeholder="Digite sua Senha"
-            handleOnChange={(e) => setPassword(e.target.value)}
+            handleOnChange={(e) => setSenha(e.target.value)}
           />
         </div>
 

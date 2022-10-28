@@ -1,5 +1,4 @@
 import axios from "axios";
-import { json } from "react-router-dom";
 
 const api = axios.create({
     // baseURL: process.env.REACT_APP_API
@@ -7,24 +6,21 @@ const api = axios.create({
 });
 
 // Ela vai retornar um objeto contendo funções para serem utilizadas em outros locais.
-// Esse hook vai ser responsável por fazer requisições para a API
+    // Esse costumHook vai ser responsável por fazer requisições para a API.
 export const useApi = () => ({
-    validateToken: async (token) => {
+    validateToken: async(token) => {
         const response = await api.post('/validate', {token});
         return response.data;
     },
-    signup: async(name, email, password) => {
-        const response = await api.post('/usuarios',{name, email, password});
+    signup: async(name, email, senha) => {
+        const response = await api.post('/usuarios',{name, email, senha})
         return response.data;
     },
-    signin: async(email, password) => {
-        const response = await api.post('/auth', JSON.stringify({email, password}));
-        console.log(JSON.stringify(response.data.token))
-  
-        return response.data.token;
-
+    signin: async(email, senha) => {
+        const response = await api.post('/auth', {email, senha})
+        return response.data;
     },
-    logout: async () => {
+    logout: async() => {
         const response = await api.post('/logout');
         return response.data;
     }
