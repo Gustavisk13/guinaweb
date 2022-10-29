@@ -48,7 +48,7 @@ function MenuDesktop({ setMenuIsVisible }) {
         )}
         {/* Se o usuário estiver cadastrado, renderize esse outro */}
         {auth.user && (
-          <Link className={styles.menuButton} onClick={handleLogout}>
+          <Link className={styles.menuButton} onClick={handleLogout()}>
             Sair
           </Link>
         )}

@@ -30,11 +30,12 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
   }, [api]);
 
   // Não vamos fazer a requisição para a Api diretamente aqui, colocando em cada função a URL diretamente, vamos usar um hook para isso.
-  const signin = async (email: string, senha: string) => {
-    const data = await api.signin(email, senha);
-    if(data.user && data.token){
+  const signin = async (email: string, password: string) => {
+    const data = await api.signin(email, password);
+    console.log(data)
+    if(data.user && data.user.token){
       setUser(data.user);
-      setToken(data.token); // toda vez que fizermo o login, vamos salvar o token no localstore
+      setToken(data.user.token); // toda vez que fizermo o login, vamos salvar o token no localstore
       return true;
     }
     return false;
@@ -45,6 +46,9 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
     setUser(null); // limpando o usuário de fato.
     setToken(''); // vamos limpar o localstorage também
   };
+
+  
+
 
   //Função responsável por salvar o token
   const setToken = (token: string) => {

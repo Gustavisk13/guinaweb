@@ -12,13 +12,22 @@ export const useApi = () => ({
         const response = await api.post('/validate', {token});
         return response.data;
     },
-    signup: async(name, email, senha) => {
-        const response = await api.post('/usuarios',{name, email, senha})
+    signup: async(name, email, password) => {
+        const response = await api.post('/usuarios',{name, email, password})
         return response.data;
     },
-    signin: async(email, senha) => {
-        const response = await api.post('/auth', {email, senha})
-        return response.data;
+    signin: async(email, password) => {
+        const response = await api.post('/auth', {email, password})
+        const responseJson = {
+            user: {
+                id: response.data.id,
+                name: response.data.name,
+                email: response.data.email,
+                token: response.data.token
+            }
+        }
+        console.log(responseJson)
+        return responseJson;
     },
     logout: async() => {
         const response = await api.post('/logout');
