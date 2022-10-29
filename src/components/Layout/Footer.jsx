@@ -1,5 +1,5 @@
 import styles from './footer.module.css';
-import LogoGuina from '../../../images/logo.jpg';
+import LogoGuina from '../../images/logo.jpg';
 
 import { FaInstagram } from 'react-icons/fa';
 import { FaDiscord } from 'react-icons/fa';

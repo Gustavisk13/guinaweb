@@ -16,10 +16,12 @@ footer {
   margin: 0 auto;
   padding-top: 7.2rem;
   padding-inline: 9rem;
+  
   /* background-color: blue; */
 }
 
 footer .containerLogoAndMessage {
+  /* background-color: blueviolet; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,6 +29,7 @@ footer .containerLogoAndMessage {
   height: 8.5rem;
 }
 footer .containerLogoAndMessage .guinaRangerLogo img {
+  /* background-color: aqua; */
   height: 6rem;
   max-width: 100%;
 }
@@ -106,13 +109,51 @@ footer .containerListFooter .list ul li {
 @media (max-width: 1600px){
   .containerListFooter{
     display: none;
-    background-color: red;
+    /* background-color: red; */
   }
   .flex{
     flex-direction: column;
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
   footer .containerSocialLinks{
-    margin-top: 10rem;
+    padding-bottom: 3.5rem;
+    margin-top: 5rem;
   }
+
+  footer .containerLogoAndMessage .guinaRangerLogo img {
+  /* background-color: aqua; */
+  height: 4rem;
+  }
+
+  footer .containerLogoAndMessage .fraseLogo {
+  font-size: 1.6rem;
+}
+
+  footer .containerSocialLinks {
+  text-align: center;
+  margin-top: 0rem;
+  padding-inline: 2rem;
+  }
+
+  footer .containerSocialLinks ul {
+    gap: 2rem;
+  }
+  
+}
+
+
+@media (max-width: 565px){
+  footer .containerLogoAndMessage .guinaRangerLogo img {
+  /* background-color: aqua; */
+  height: 3rem;
+  }
+    .redeSociaisText{
+    display: none;
+  }
+
+  .flex{
+  padding-inline: 5rem;
+  /* background-color: blue; */
+  }
+
 }
