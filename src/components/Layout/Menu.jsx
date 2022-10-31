@@ -8,8 +8,8 @@ import { GiHamburgerMenu } from "react-icons/gi";
 function MenuDesktop({ setMenuIsVisible }) {
   const auth = useContext(AuthContext);
 
-  const handleLogout = async () => {
-    await auth.signout();
+  const handleLogout = () => {
+    auth.signout();
     window.location.href = window.location.href; // fazendo um f5 na página
   };
 
@@ -48,7 +48,7 @@ function MenuDesktop({ setMenuIsVisible }) {
         )}
         {/* Se o usuário estiver cadastrado, renderize esse outro */}
         {auth.user && (
-          <Link className={styles.menuButton} onClick={handleLogout()}>
+          <Link className={styles.menuButton} onClick={handleLogout}>
             Sair
           </Link>
         )}

@@ -1,7 +1,8 @@
 import styles from "./FormRegister.module.css";
 import Input from "../../../Form/Input";
 import SubmitButton from "../../../Form/SubmitButton";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AuthContext } from "../../../Contexts/Auth/AuthContext";
 
 function Form() {
   const [name, setName] = useState('');
@@ -9,12 +10,19 @@ function Form() {
   const [password, setPassword] = useState('');
   const [passwordConfi, setPasswordConfi] = useState('');
 
-  function submit(e){
+  const auth = useContext(AuthContext);
+  // THmaol_159
+  const  handleSubmit = async (e) => {
     e.preventDefault();
     if (!name | !email | !password | !passwordConfi) {
       alert("Preencha todos os campos corretamente!!");
     } else if (password !== passwordConfi) {
       alert("As senhas não são iguais");
+    }else{
+      const sendData = await auth.signup(name, email, password);
+      if(sendData){
+        console.log(sendData)
+      }
     }
   }
   
@@ -22,7 +30,7 @@ function Form() {
 //!name | !email | !password | !pass
 
   return (
-    <form className={styles.container} onSubmit={submit}>
+    <form className={styles.container} onSubmit={handleSubmit}>
       <header className={styles.titulo}>
         <p>Register</p>
       </header>

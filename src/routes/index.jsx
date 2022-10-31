@@ -36,8 +36,7 @@ function RoutesWeb() {
               path="/texteditor"
               element={
                 <RequireAuth>
-                  {" "}
-                  <TextEditor />{" "}
+                  <TextEditor />
                 </RequireAuth>
               }
             />
