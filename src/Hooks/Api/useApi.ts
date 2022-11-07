@@ -6,12 +6,12 @@ const api = axios.create({
 });
 
 export const useApi = () => ({
-    signup: async(nome, email, senha) => {
-        const response = await api.post('/usuarios', {nome, email, senha})
-        return response;
-    },
-    signin: async(email, password) => {
+    signin: async(email:string, password:string) => {
         const response = await api.post('/auth', {email, password})
         return response.data;
+    },
+    signup: async(nome: string, email: string, senha: string) => {
+        const response = await api.post('/usuarios', {nome, email, senha})
+        return response;
     },
 });

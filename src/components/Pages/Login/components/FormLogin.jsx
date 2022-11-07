@@ -26,7 +26,6 @@ function Form() {
       if(isLogged){
         navigate("/texteditor");
       }else{
-        console.log(isLogged)
         alert('Cadastro não identificado!')
       }
     }

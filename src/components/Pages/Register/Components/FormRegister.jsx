@@ -3,31 +3,46 @@ import Input from "../../../Form/Input";
 import SubmitButton from "../../../Form/SubmitButton";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../../Contexts/Auth/AuthContext";
+import { useNavigate } from "react-router-dom";
+import { useApi } from "../../../../Hooks/Api/useApi";
 
 function Form() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [passwordConfi, setPasswordConfi] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [passwordConfi, setPasswordConfi] = useState("");
 
   const auth = useContext(AuthContext);
-  // THmaol_159
-  const  handleSubmit = async (e) => {
+  const navigate = useNavigate();
+
+  const api = useApi();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!name | !email | !password | !passwordConfi) {
       alert("Preencha todos os campos corretamente!!");
     } else if (password !== passwordConfi) {
       alert("As senhas não são iguais");
-    }else{
+    } else {
       const sendData = await auth.signup(name, email, password);
-      if(sendData){
-        console.log(sendData)
-      }
+      console.log(sendData)
+
+      // try {
+      //   const sendData = await api.signup(name, email, password);
+      //   alert("Cadastro criado com Sucesso!");
+      //   navigate("/signin");
+      // } catch (error) {
+      //   console.log(error)
+      //   alert(error.response.data[0].error);
+      //   // alert(error.response.data.error);
+      // }
     }
-  }
-  
-// name.length == 0 && email.length == 0 && password.length == 0 && passwordConfi.length == 0 
-//!name | !email | !password | !pass
+  };
+  // teste
+  // teste3@teste.com
+  // TLAin159@
+  // TLAin5@
+  // aaain5@A
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>

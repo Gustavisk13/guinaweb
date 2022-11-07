@@ -22,14 +22,12 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
 // TLAin159@
 
   const signup = async(name: string, email: string, password: string) => {
-    const response = await api.signup(name, email, password)
-    console.log(response)
-    if(response){
-      console.log(response)
-      return true
+    try{
+      const response = await api.signup(name, email, password);
+    }catch(e){
+      return e.response.data
     }
-    return false
-  }
+  };
 
   // Função responsável por fazer o login e armazenar a response dos dados do usuário e token no LocalStorage.
   const signin = async (email: string, password: string) => {
@@ -48,8 +46,6 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
     localStorage.removeItem('authToken:') 
     localStorage.removeItem('userData:')
   };
-
-
 
   return (
     <AuthContext.Provider value={{ user, signin, loading, signup, signout}}>
