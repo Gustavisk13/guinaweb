@@ -6,8 +6,8 @@ const api = axios.create({
 });
 
 export const useApi = () => ({
-    signup: async(name, email, password) => {
-        const response = await api.post('/usuarios', {name, email, password})
+    signup: async(nome, email, senha) => {
+        const response = await api.post('/usuarios', {nome, email, senha})
         return response;
     },
     signin: async(email, password) => {

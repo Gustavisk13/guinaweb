@@ -18,3 +18,5 @@ export const RequireAuth = ({ children }: { children: JSX.Element}) => {
   // se eu não tenho usuário 
   return !user ? <Login/> : children
 }
+
+// Talk159@

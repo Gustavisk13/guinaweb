@@ -1,4 +1,4 @@
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 import Input from "../../../Form/Input";
 import SubmitButton from "../../../Form/SubmitButton";
@@ -16,13 +16,15 @@ function Form() {
   const [password, setPassword] = useState('');
   
   const auth = useContext(AuthContext);
-  
+  const navigate = useNavigate();
+
+  // Enviando informações para Api para fazer o Login.
   const handleLogin = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if(email && password){
-      const isLogged = await auth.signin(email, password); // vamos mandar para o contexto, o contexto vai mandar para a requisição e vai retornar somente true or false.
+      const isLogged = await auth.signin(email, password);
       if(isLogged){
-        Navigate('texteditor');
+        navigate("/texteditor");
       }else{
         console.log(isLogged)
         alert('Cadastro não identificado!')

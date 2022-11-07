@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
       setLoading(false)
     }
   }, []);
-
+// TLAin159@
 
   const signup = async(name: string, email: string, password: string) => {
     const response = await api.signup(name, email, password)
@@ -42,6 +42,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
     }
     return false;
   };
+  
   const signout = () => {
     setUser(null); 
     localStorage.removeItem('authToken:') 
@@ -51,7 +52,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
 
 
   return (
-    <AuthContext.Provider value={{ user, signin, loading, signup,signout}}>
+    <AuthContext.Provider value={{ user, signin, loading, signup, signout}}>
       {children}
     </AuthContext.Provider>
   );
