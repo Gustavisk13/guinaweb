@@ -1,13 +1,17 @@
-import { useEffect, useState } from "react";
-import { useApi } from "../../../Hooks/Api/useApi";
-import { User } from "../../../types/User";
-import { AuthContext } from "./AuthContext";
 import React from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+import { User } from "../../../types/User";
+import { useApi } from "../../../Hooks/Api/useApi";
+import { AuthContext } from "./AuthContext";
+
 
 export const AuthProvider = ({ children }: { children: JSX.Element}) => {
   const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true)
+  
   const api = useApi();
+  const navigate = useNavigate()
 
   // Verificando se existe um usuário logado.
   useEffect(() => {
@@ -16,16 +20,17 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
      
     if(storageDataUser && storageToken){
       setUser(JSON.parse(storageDataUser));
-      setLoading(false)
     }
   }, []);
-// TLAin159@
 
+  // Função responsável por fazer o registro do usuário.
   const signup = async(name: string, email: string, password: string) => {
     try{
-      const response = await api.signup(name, email, password);
+      await api.signup(name, email, password);
+      alert('Usuário Criado com Sucesso!');
+      navigate('/signin');
     }catch(e){
-      return e.response.data
+      return e.response.data;
     }
   };
 
@@ -41,6 +46,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
     return false;
   };
   
+  // Função responsável por deslogar o usuário
   const signout = () => {
     setUser(null); 
     localStorage.removeItem('authToken:') 
@@ -48,7 +54,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, signin, loading, signup, signout}}>
+    <AuthContext.Provider value={{ user, signin, signup, signout}}>
       {children}
     </AuthContext.Provider>
   );

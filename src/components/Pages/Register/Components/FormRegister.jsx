@@ -1,10 +1,9 @@
-import styles from "./FormRegister.module.css";
-import Input from "../../../Form/Input";
-import SubmitButton from "../../../Form/SubmitButton";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../../Contexts/Auth/AuthContext";
-import { useNavigate } from "react-router-dom";
-import { useApi } from "../../../../Hooks/Api/useApi";
+
+import SubmitButton from "../../../Form/SubmitButton";
+import styles from "./FormRegister.module.css";
+import Input from "../../../Form/Input";
 
 function Form() {
   const [name, setName] = useState("");
@@ -13,9 +12,6 @@ function Form() {
   const [passwordConfi, setPasswordConfi] = useState("");
 
   const auth = useContext(AuthContext);
-  const navigate = useNavigate();
-
-  const api = useApi();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,24 +21,17 @@ function Form() {
       alert("As senhas não são iguais");
     } else {
       const sendData = await auth.signup(name, email, password);
-      console.log(sendData)
-
-      // try {
-      //   const sendData = await api.signup(name, email, password);
-      //   alert("Cadastro criado com Sucesso!");
-      //   navigate("/signin");
-      // } catch (error) {
-      //   console.log(error)
-      //   alert(error.response.data[0].error);
-      //   // alert(error.response.data.error);
-      // }
+  
+      //tratando erros
+      if(sendData.error){
+        alert(sendData.error);
+      }else if(sendData){
+        alert(sendData[0].erro);
+      }else{
+        alert('Ocorreu um inesperado!');
+      }
     }
   };
-  // teste
-  // teste3@teste.com
-  // TLAin159@
-  // TLAin5@
-  // aaain5@A
 
   return (
     <form className={styles.container} onSubmit={handleSubmit}>
