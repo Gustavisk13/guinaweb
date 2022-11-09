@@ -7,7 +7,7 @@ export const ContainerInput = styled.input`
   font-size: 1.8rem;
   border: none;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(194, 194, 194, 0.766);
 
   ::placeholder {
   color: #000000;

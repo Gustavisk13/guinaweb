@@ -82,6 +82,10 @@
   .BiMenu{
     display: initial;
     cursor: pointer;
+    transition: 0.5s;
+  }
+  .BiMenu:hover{
+    color: yellow;
   }
   .menuButton{
     display: none;

@@ -3,7 +3,6 @@ import { Link, useNavigate } from "react-router-dom";
 import Input from "../../../Form/Input.jsx";
 import SubmitButton from "../../../Form/SubmitButton.jsx";
 
-
 import styles from "./FormLogin.module.css";
 import { BiLogIn } from 'react-icons/bi'
 import { useContext, useState } from "react";
@@ -82,7 +81,6 @@ function Form() {
           </div>
         </div>
       </form>
-      {!handleLogin && <ReactLoading />}
     </>
   );
 };
