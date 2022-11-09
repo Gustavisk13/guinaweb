@@ -43,6 +43,7 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
       localStorage.setItem('userData:', JSON.stringify(data.user));
       return true;
     }
+    console.log(data)
     return false;
   };
   

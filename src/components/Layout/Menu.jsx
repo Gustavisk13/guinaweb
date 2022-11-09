@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Contexts/Auth/AuthContext";
 import { GiHamburgerMenu } from "react-icons/gi";
 
-function MenuDesktop({ setMenuIsVisible }) {
+function MenuDesktop() {
   const auth = useContext(AuthContext);
 
   const handleLogout = () => {
@@ -40,6 +40,7 @@ function MenuDesktop({ setMenuIsVisible }) {
             </li>
           </ul>
         </nav>
+        
         {/* Se o usuário não estiver cadastrado, rederize esse botão */}
         {!auth.user && (
           <Link className={styles.menuButton} to="/signin">

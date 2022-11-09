@@ -1,14 +1,18 @@
 .form{
+  width: min(45rem, 100%);
   display: flex;
   align-items: center;
   flex-direction: column;
-  width: 47rem;
-  padding: 6rem 3rem;
+  padding: 7rem 3rem 5rem 3rem;
   box-shadow: 4rem 4.5rem 6.5rem 1.6rem rgba(0, 0, 0, 0.906);   
   border: 0.1rem solid rgb(0, 0, 0);
   border-radius: 1rem 10rem;
   background-color: rgba(0, 0, 0, 0.50);
 }
+.formlogin{
+  width: 100%;
+}
+
 .form header{
   width: 100%;
   margin-block: 2rem;
@@ -36,14 +40,37 @@
 }
 .boxinput{     
   width: 100%;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: left;
+  margin-bottom: 2rem;
   font-size: 2rem;
   /* background-color: blue; */
 }
+.boxinput label{
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+
+.icon_Input{
+  width: 8rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  background-color: rgb(255, 255, 255);
+}
+.boxinput_container{
+  display: flex;
+  align-items: center;
+  /* background-color: black; */
+}
+.boxinput_container svg{
+  color: rgb(0, 0, 0);
+}
+
+
 .form a{
   color: rgb(255, 204, 0);
   font-weight: 900;

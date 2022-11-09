@@ -32,8 +32,9 @@
 }
 .containerMenu li a {
   color: #ffffff;
+  transition: 0.5s;
 }
-.containerMenuli a:hover {
+.containerMenu li a:hover {
   color: rgb(255, 243, 5);
   font-size: 1.8rem;
 }
@@ -49,9 +50,9 @@
   background-color: rgba(255, 253, 253, 0.262745098);
 }
 .menuButton:hover {
-  color: black;
+  color: rgb(0, 0, 0);
   filter: brightness(0.8);
-  background-color: rgb(255, 255, 255);
+  background-color: #FFE711;
 }
 
 @media(max-width: 900px){
