@@ -4,4 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=styles.module.css.map */
+}
+
+@media(max-width: 700px){
+  .conteudoPrincipal {
+    padding-top: 5.5rem;
+  }
+}
