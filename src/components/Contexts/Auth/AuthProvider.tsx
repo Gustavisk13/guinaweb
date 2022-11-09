@@ -36,14 +36,19 @@ export const AuthProvider = ({ children }: { children: JSX.Element}) => {
 
   // Função responsável por fazer o login e armazenar a response dos dados do usuário e token no LocalStorage.
   const signin = async (email: string, password: string) => {
-    const data = await api.signin(email, password);
-    if(data.user && data.token){
-      setUser(data.user);
-      localStorage.setItem('authToken:', data.token);
-      localStorage.setItem('userData:', JSON.stringify(data.user));
-      return true;
-    }
-    console.log(data)
+    try{
+      const data = await api.signin(email, password);
+      if(data.user && data.token){
+        setUser(data.user);
+        localStorage.setItem('authToken:', data.token);
+        localStorage.setItem('userData:', JSON.stringify(data.user));
+
+        return true;
+      }
+    }catch(e){
+      alert('Usuário não identificado!');
+    };
+
     return false;
   };
   
