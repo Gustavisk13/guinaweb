@@ -1,15 +1,15 @@
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-import Input from "../../../Form/Input";
-import SubmitButton from "../../../Form/SubmitButton";
-
+import Input from "../../../Form/Input.jsx";
+import SubmitButton from "../../../Form/SubmitButton.jsx";
 
 import styles from "./FormLogin.module.css";
 import { BiLogIn } from 'react-icons/bi'
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Contexts/Auth/AuthContext";
 
-import ReactLoading from 'react-loading'
+import { HiOutlineMail } from "react-icons/hi";
+import { AiFillLock } from "react-icons/ai";
 
 function Form() {
   const [email, setEmail] = useState('');
@@ -25,11 +25,9 @@ function Form() {
       const isLogged = await auth.signin(email, password);
       if(isLogged){
         navigate("/texteditor");
-      }else{
-        alert('Cadastro não identificado!')
       }
     }
-  }
+  };
 
   return (
     <>
@@ -44,21 +42,35 @@ function Form() {
           </header>
 
           <div className={styles.boxinput}>
-            <Input
-              type="email"
-              text="E-mail :"
-              placeholder="Digite seu E-mail"
-              handleOnChange={(e) => setEmail(e.target.value)}
-            />
+            <label htmlFor="Email">Email:</label>
+
+            <div className={styles.boxinput_container}>
+              <div className={styles.icon_Input}>
+                <HiOutlineMail size={30} />
+              </div>
+
+              <Input
+                type="email"
+                placeholder="Digite seu E-mail"
+                handleOnChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
           </div>
 
           <div className={styles.boxinput}>
-            <Input
-              type="password"
-              text="Password :"
-              placeholder="Digite sua password"
-              handleOnChange={(e) => setPassword(e.target.value)}
-            />
+            <label htmlFor="password">Password:</label>
+
+            <div className={styles.boxinput_container}>
+              <div className={styles.icon_Input}>
+                <AiFillLock size={30} />
+              </div>
+
+              <Input
+                type="password"
+                placeholder="Digite sua Senha"
+                handleOnChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
           </div>
 
           <SubmitButton text="Entrar" />
@@ -69,7 +81,6 @@ function Form() {
           </div>
         </div>
       </form>
-      {!handleLogin && <ReactLoading />}
     </>
   );
 };

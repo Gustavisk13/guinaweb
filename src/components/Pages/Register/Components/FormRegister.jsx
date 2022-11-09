@@ -1,9 +1,13 @@
 import { useState, useContext } from "react";
 import { AuthContext } from "../../../Contexts/Auth/AuthContext";
 
-import SubmitButton from "../../../Form/SubmitButton";
+import SubmitButton from "../../../Form/SubmitButton.jsx";
 import styles from "./FormRegister.module.css";
-import Input from "../../../Form/Input";
+import Input from "../../../Form/Input.jsx";
+
+import { HiOutlineMail } from "react-icons/hi"
+import { BsPersonFill } from "react-icons/bs";
+import { AiFillLock} from 'react-icons/ai'
 
 function Form() {
   const [name, setName] = useState("");
@@ -41,43 +45,68 @@ function Form() {
 
       <div className={styles.inputsContainer}>
         <div className={styles.boxinput}>
-          <Input
-            type="text"
-            text="Nome :"
-            placeholder="Digite seu Nome"
-            name="name"
-            handleOnChange={(e) => setName(e.target.value)}
-          />
+          <label htmlFor="name">Nome:</label>
+
+          <div className={styles.boxinputIconandInput}>
+            <div className={styles.icon_Input}>
+              <BsPersonFill size={30} />
+            </div>
+            <Input
+              type="text"
+              placeholder="Digite seu Nome"
+              name="name"
+              handleOnChange={(e) => setName(e.target.value)}
+            />
+          </div>
         </div>
 
         <div className={styles.boxinput}>
-          <Input
-            type="email"
-            text="Email :"
-            placeholder="Digite seu E-mail"
-            name="Email"
-            handleOnChange={(e) => setEmail(e.target.value)}
-          />
+          <label htmlFor="Email">Email:</label>
+
+          <div className={styles.boxinputIconandInput}>
+            <div className={styles.icon_Input}>
+              <HiOutlineMail size={30} />
+            </div>
+            <Input
+              type="email"
+              placeholder="Digite seu E-mail"
+              name="Email"
+              handleOnChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
         </div>
 
         <div className={styles.boxinput}>
-          <Input
-            type="password"
-            text="Password :"
-            placeholder="Digite sua Senha"
-            name="password"
-            handleOnChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+          <label htmlFor="Password">Digite sua Senha:</label>
 
+          <div className={styles.boxinputIconandInput}>
+            <div className={styles.icon_Input}>
+              <AiFillLock size={30} />
+            </div>
+
+            <Input
+              type="password"
+              placeholder="Digite sua Senha"
+              name="password"
+              handleOnChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+        </div>
         <div className={styles.boxinput}>
-          <Input
-            type="password"
-            text="Confirm Password :"
-            placeholder="Confirme sua Senha"
-            name="Confirmpassword"
-            handleOnChange={(e) => setPasswordConfi(e.target.value)}
-          />
+          <label htmlFor="ConfirmPassword">Confirme a Senha:</label>
+          
+          <div className={styles.boxinputIconandInput}>
+            <div className={styles.icon_Input}>
+              <AiFillLock size={30} />
+            </div>
+
+            <Input
+              type="password"
+              placeholder="Confirme sua Senha"
+              name="Confirmpassword"
+              handleOnChange={(e) => setPasswordConfi(e.target.value)}
+            />
+          </div>
         </div>
 
         <SubmitButton text="Cadastrar" />

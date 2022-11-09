@@ -1,12 +1,12 @@
 .container {
+  width: min(45rem, 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-block: 4rem;
-  padding-inline: 2.8rem;
+  padding: 7rem 3rem 5rem 3rem;
   border: 0.1rem solid #000000;
-  border-radius: 5rem;
+  border-radius: 1rem 10rem;
   box-shadow: 5rem 5rem 5rem rgba(3, 0, 0, 0.83);
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -16,10 +16,46 @@
   font-size: 4rem;
   line-height: 5rem;
 }
+
+.boxinput{
+  width: 100%;
+}
 .container .inputsContainer {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 2rem;
+  /* background-color: blue; */
+}
+
+.icon_Input{
+  width: 8rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  color: rgb(0, 0, 0);
+  background-color: rgba(194, 194, 194, 0.766);
+}
+.boxinputIconandInput{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: black; */
+}
+label{
+  display: block;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+}
+
+@media(max-width: 700px){
+  .container{
+    padding: 3rem 3rem 5rem 3rem;
+  }
 }
