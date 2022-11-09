@@ -1,18 +1,18 @@
-import Logo from "../../images/logo.jpg";
+import Logo from "../../../images/logo.jpg";
 import styles from "./Menu.module.css";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { AuthContext } from "../Contexts/Auth/AuthContext";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { AuthContext } from "../../Contexts/Auth/AuthContext";
+import { BiMenu } from "react-icons/bi";
 
-function MenuDesktop() {
+function Menu({ setMenuIsVisible }) {
   const auth = useContext(AuthContext);
 
   const handleLogout = () => {
     auth.signout();
     window.location.href = window.location.href; // fazendo um f5 na página
   };
-
+  
   return (
     <>
       <div className={styles.containerMenu}>
@@ -23,7 +23,13 @@ function MenuDesktop() {
             title="Logo_da_GuinaRangers"
           />
         </Link>
-        {/* <GiHamburgerMenu size={35} onClick={() => setMenuIsVisible(true)} /> */}
+
+        <BiMenu
+          className={styles.BiMenu}
+          size={40}
+          onClick={() => setMenuIsVisible(true)}
+        />
+
         <nav>
           <ul>
             <li>
@@ -40,7 +46,7 @@ function MenuDesktop() {
             </li>
           </ul>
         </nav>
-        
+
         {/* Se o usuário não estiver cadastrado, rederize esse botão */}
         {!auth.user && (
           <Link className={styles.menuButton} to="/signin">
@@ -58,4 +64,4 @@ function MenuDesktop() {
   );
 }
 
-export default MenuDesktop;
+export default Menu;

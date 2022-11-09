@@ -8,7 +8,6 @@ function Login() {
     <>
       <div className={styles.wrapper}>           
         <Form />
-        
       </div>
     </>
   );
