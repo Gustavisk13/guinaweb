@@ -20,7 +20,7 @@ export const Container = styled.div`
     line-height: 1.8rem;
     color: rgb(0, 0, 0);
     transition: all 1s;
-    background-color:  rgba(194, 194, 194, 1);
+    background-color:  rgba(194, 194, 194, 95%);
   }
 
   button::before{
@@ -42,7 +42,8 @@ export const Container = styled.div`
   }
 
   button:hover{
-    background: rgb(254,242,0);
-    background: linear-gradient(90deg, rgba(254,242,0,0.8855917366946778) 0%, rgba(224,223,224,0.7175245098039216) 100%, rgba(0,212,255,1) 100%);
+    color: #ffff;
+    filter: brightness(1);
+    background: #484c52;
   }
 `

@@ -1,14 +1,19 @@
+.container{
+  width: 100vw;
+  height: var(--nav-height);
+  position: fixed;
+  z-index: 1; 
+  /* background-color: blue; */
+}
+
 .containerMenu{
+  max-width: 185rem;
+
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw;
-  padding-inline: 3rem;
-  height: var(--nav-height);
-  position: fixed;
-  top: 0;
-  z-index: 1; 
-  /* background-color: blue; */
+  margin: 0 auto;
 }
 
 .BiMenu{
@@ -24,7 +29,6 @@
 .containerMenu nav{
   height: 100%;
 }
-
 .containerMenu nav ul{
   height: 100%;
   display: flex;
@@ -39,7 +43,7 @@
   transition: 0.5s;
 }
 .containerMenu li a:hover {
-  color: rgb(255, 243, 5);
+  color: var(--link-color);
   font-size: 1.8rem;
 }
 .menuButton {
@@ -55,8 +59,8 @@
 }
 .menuButton:hover {
   color: rgb(0, 0, 0);
-  filter: brightness(0.8);
-  background-color: #FFE711;
+  filter: brightness(1);
+  background-color: #E6B404;
 }
 
 @media(max-width: 900px){
@@ -85,7 +89,7 @@
     transition: 0.5s;
   }
   .BiMenu:hover{
-    color: yellow;
+    color: #FFE711;
   }
   .menuButton{
     display: none;

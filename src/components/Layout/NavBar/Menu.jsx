@@ -15,50 +15,52 @@ function Menu({ setMenuIsVisible }) {
   
   return (
     <>
-      <div className={styles.containerMenu}>
-        <Link className={styles.logo} to="/">
-          <img
-            src={Logo}
-            alt="Guina Rangers Logo"
-            title="Logo_da_GuinaRangers"
+      <div className={styles.container}>
+        <div className={styles.containerMenu}>
+          <Link className={styles.logo} to="/">
+            <img
+              src={Logo}
+              alt="Guina Rangers Logo"
+              title="Logo_da_GuinaRangers"
+            />
+          </Link>
+
+          <BiMenu
+            className={styles.BiMenu}
+            size={40}
+            onClick={() => setMenuIsVisible(true)}
           />
-        </Link>
 
-        <BiMenu
-          className={styles.BiMenu}
-          size={40}
-          onClick={() => setMenuIsVisible(true)}
-        />
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Sobre nós</a>
+              </li>
+              <li>
+                <Link to="/TextEditor">Notícias</Link>
+              </li>
+              <li>
+                <a href="#">Guinaverso</a>
+              </li>
+            </ul>
+          </nav>
 
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Sobre nós</a>
-            </li>
-            <li>
-              <Link to="/TextEditor">Notícias</Link>
-            </li>
-            <li>
-              <a href="#">Guinaverso</a>
-            </li>
-          </ul>
-        </nav>
-
-        {/* Se o usuário não estiver cadastrado, rederize esse botão */}
-        {!auth.user && (
-          <Link className={styles.menuButton} to="/signin">
-            Login
-          </Link>
-        )}
-        {/* Se o usuário estiver cadastrado, renderize esse outro */}
-        {auth.user && (
-          <Link className={styles.menuButton} onClick={handleLogout}>
-            Sair
-          </Link>
-        )}
+          {/* Se o usuário não estiver cadastrado, rederize esse botão */}
+          {!auth.user && (
+            <Link className={styles.menuButton} to="/signin">
+              Login
+            </Link>
+          )}
+          {/* Se o usuário estiver cadastrado, renderize esse outro */}
+          {auth.user && (
+            <Link className={styles.menuButton} onClick={handleLogout}>
+              Sair
+            </Link>
+          )}
+        </div>
       </div>
     </>
   );

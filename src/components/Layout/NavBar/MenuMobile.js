@@ -53,11 +53,11 @@ export const Container = styled.div`
     left: 1rem;
   }
   .logo img {
-      width: 20rem; 
+    width: 20rem; 
   }
 
-  //Inserindo JavaScript dentro do Css styled components
-    // Vamos aplicar um css apenas quando o menu estiver aberto.
+
+  // Vamos aplicar um css apenas quando o menu estiver aberto.
   ${({ isVisible }) => isVisible && css`
       opacity: 1;
       pointer-events: auto; // Pesquisar

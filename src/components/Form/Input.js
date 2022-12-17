@@ -7,6 +7,7 @@ export const ContainerInput = styled.input`
   font-size: 1.8rem;
   border: none;
   border-radius: 0rem 0.5rem 0.5rem 0rem;
+  padding-left: 1rem;
   background-color: rgba(194, 194, 194, 0.766);
 
   ::placeholder {
@@ -15,6 +16,7 @@ export const ContainerInput = styled.input`
   font-size: 1.4rem;
   letter-spacing: 0.13rem;
   line-height: 1.7rem;
+  filter: brightness(2);
   }
   :focus {
     outline: none;

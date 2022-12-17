@@ -9,7 +9,7 @@
   font-size: 62.5%;
   
   --text-color: #ffff;
-  --link-color: #FFE711;
+  --link-color: #E6B404;
   --background-color: #262626;
 
   --nav-height: 8rem;
@@ -22,20 +22,22 @@ body,html{
   height: 100%;
 }
 body{
+  display: flex;
+  flex-direction: column;
   background-color: var(--background-color);
   /* padding-top: var(--nav-height); */
+  
   font-family: 'Montserrat';
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: white;
 }
+
+
 ::-webkit-scrollbar {
   width: 5px;
   height: 5px;
   transition:.3s;
 }
 ::-webkit-scrollbar-thumb {
-  background: #f8c406;
+  background: #ff0000;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track{

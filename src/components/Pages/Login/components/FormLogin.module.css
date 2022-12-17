@@ -59,7 +59,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.5rem 0rem 0rem 0.5rem;
-  background-color: rgba(194, 194, 194, 0.766);
+  background-color: rgba(103, 103, 101, 0.8);
 }
 .boxinput_container{
   display: flex;
@@ -67,7 +67,7 @@
   /* background-color: black; */
 }
 .boxinput_container svg{
-  color: rgb(0, 0, 0);
+  color: rgba(255, 255, 255, 0.77);
   filter: brightness(15px);
 }
 

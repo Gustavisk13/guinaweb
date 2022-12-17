@@ -4,7 +4,7 @@ import {Container} from './SubmitButton.js'
 function SubmitButton({text}) {
   return (
     <Container>
-      <button> {text} </button>
+      <button>{text}</button>
     </Container>
   ); 
 };

@@ -1,22 +1,22 @@
-footer .gradient {
-  height: 8rem;
-  width: 100%;
-  background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(18, 18, 18));
-}
-
 footer {
   width: 100%;
+  flex-shrink: 0;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+footer .gradient {
+  height: 8rem;
+  background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(18, 18, 18));
 }
 
 .flex{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 185rem;
   margin: 0 auto;
   padding-top: 7.2rem;
   padding-inline: 9rem;
-  
   /* background-color: blue; */
 }
 
@@ -140,7 +140,6 @@ footer .containerListFooter .list ul li {
   }
   
 }
-
 
 @media (max-width: 565px){
   footer .containerLogoAndMessage .guinaRangerLogo img {
