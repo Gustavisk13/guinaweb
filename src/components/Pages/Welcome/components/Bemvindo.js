@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Section = styled.section`
   max-width: 180rem;
   margin: 0 auto;
-  margin-block: 15rem 30rem;
+  margin-block: 10rem 30rem;
 
 
   display: grid;

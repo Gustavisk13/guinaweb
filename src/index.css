@@ -1,15 +1,7 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
+
 :root{
   font-size: 62.5%;
   
-  --text-color: #ffff;
-  --link-color: #E6B404;
   --background-color: #262626;
 
   --nav-height: 8rem;
@@ -22,12 +14,7 @@ body,html{
   height: 100%;
 }
 body{
-  display: flex;
-  flex-direction: column;
   background-color: var(--background-color);
-  /* padding-top: var(--nav-height); */
-  
-  font-family: 'Montserrat';
 }
 
 

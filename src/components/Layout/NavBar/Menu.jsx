@@ -8,6 +8,7 @@ import { BiMenu } from "react-icons/bi";
 function Menu({ setMenuIsVisible }) {
   const auth = useContext(AuthContext);
 
+  
   const handleLogout = () => {
     auth.signout();
     window.location.href = window.location.href; // fazendo um f5 na página

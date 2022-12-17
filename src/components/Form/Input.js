@@ -11,12 +11,12 @@ export const ContainerInput = styled.input`
   background-color: rgba(194, 194, 194, 0.766);
 
   ::placeholder {
-  color: #000000;
-  font-weight: 600;
-  font-size: 1.4rem;
-  letter-spacing: 0.13rem;
-  line-height: 1.7rem;
-  filter: brightness(2);
+    color: #000000;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.13rem;
+    line-height: 1.7rem;
+    filter: brightness(2);
   }
   :focus {
     outline: none;
