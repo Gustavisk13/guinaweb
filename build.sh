@@ -4,7 +4,7 @@ GREEN="\033[32m"
 NORMAL="\033[0m"
 
 USERNAME=gustavisk
-IMAGE=guina-api
+IMAGE=guinaweb
 
 
 read -p 'Insira a versão do git: ' VERSIONGIT
