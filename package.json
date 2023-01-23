@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "guinaweb start"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
