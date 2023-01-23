@@ -6,5 +6,4 @@ RUN npm install --legacy-peer-deps
 COPY . /app
 RUN npm run build
 EXPOSE 3000
-EXPOSE 5173
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
