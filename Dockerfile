@@ -5,5 +5,5 @@ COPY package.json /app
 RUN npm install --legacy-peer-deps
 COPY . /app
 RUN npm run build
-EXPOSE 3000
-CMD ["npm", "run", "start"]
+EXPOSE 5173
+CMD ["npm", "run", "dev"]
