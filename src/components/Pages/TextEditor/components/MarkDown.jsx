@@ -8,7 +8,11 @@ const MarkDown = () => {
 return (
     <>
         <div className="container-markdown">
-            <textarea value={markDown} onChange={(e) => setMarkdown(e.target.value)} className="textarea"></textarea>
+            <textarea value={markDown} onChange={(e) => setMarkdown(e.target.value)} 
+            onClick={() => {
+                console.log(markDown)
+            }}
+            className="textarea"></textarea>
             <div className="output">
                 <ReactMarkdown>
                     {markDown}
