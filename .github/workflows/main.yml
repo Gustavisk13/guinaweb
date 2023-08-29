@@ -72,9 +72,9 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: ${{ env.SSH_HOST }}
-          username: ${{ env.SSH_USERNAME }}
-          key: ${{ env.SSH_KEY }}
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             sudo systemctl restart guinaweb-staging.service
             exit
