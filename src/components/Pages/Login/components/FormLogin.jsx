@@ -4,7 +4,7 @@ import Input from "../../../Form/Input.jsx";
 import SubmitButton from "../../../Form/SubmitButton.jsx";
 
 import styles from "./FormLogin.module.css";
-import { BiLogIn } from 'react-icons/bi'
+import { BiLogIn } from "react-icons/bi";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Contexts/Auth/AuthContext";
 
@@ -12,18 +12,18 @@ import { HiOutlineMail } from "react-icons/hi";
 import { AiFillLock } from "react-icons/ai";
 
 function Form() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   const auth = useContext(AuthContext);
   const navigate = useNavigate();
 
   // Enviando informações para Api para fazer o Login.
   const handleLogin = async (e) => {
     e.preventDefault();
-    if(email && password){
+    if (email && password) {
       const isLogged = await auth.signin(email, password);
-      if(isLogged){
+      if (isLogged) {
         navigate("/texteditor");
       }
     }
@@ -73,7 +73,7 @@ function Form() {
             </div>
           </div>
 
-          <SubmitButton text="Entrar" />
+          <SubmitButton text="Funcionou Caralho" />
 
           <div className={styles.notHaveCount}>
             <span>Não possui uma conta? </span>
@@ -83,6 +83,6 @@ function Form() {
       </form>
     </>
   );
-};
+}
 
 export default Form;
