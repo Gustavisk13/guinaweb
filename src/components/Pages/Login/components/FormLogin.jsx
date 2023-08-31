@@ -73,7 +73,7 @@ function Form() {
             </div>
           </div>
 
-          <SubmitButton text="Funcionou Caralho" />
+          <SubmitButton text="Vinicius Gay" />
 
           <div className={styles.notHaveCount}>
             <span>Não possui uma conta? </span>
